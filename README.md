@@ -27,8 +27,8 @@ Please enter the equation here: 2x + 3y - z = 8
 Please enter the equation here: x - 2y + 4z = -2
 Please enter the equation here: 3x - y + 2z = 10
 
-The value of x: 1.0
-The value of y: 2.0
-The value of z: 3.0
+The value of x: 4.4
+The value of y: -0.9599999999999993
+The value of z: -2.08
 
 ```
