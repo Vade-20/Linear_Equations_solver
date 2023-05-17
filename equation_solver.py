@@ -1,5 +1,6 @@
 import numpy as np
 import re
+from fractions import Fraction
 
 num_var = int(input("Please enter the number of different variable each equation should have:"))
 
@@ -37,8 +38,9 @@ def right_eq(eq):
 var = []
 constant = np.zeros((num_var,1))
 number = np.zeros((num_var,num_var))
+
 for i in range(num_var):
-    eq = input('Please enter the equation here:').lower()
+    eq = input(f'Please enter the equation number {i} here:').lower()
     eq = right_eq(eq)
     isequation(eq)
     data = re.findall(r'([-]?[\d]*)([a-z])',eq)
@@ -62,10 +64,10 @@ try:
 except np.linalg.LinAlgError:
     print("There is no solution for given set of equation")
     quit()
+    
 ans = np.matmul(inverse_number,constant)
-
 for i in range(num_var):
-    print(f'The value of {var[i]}:{ans[i,0]}')
+    print(f'The value of {var[i]}:{Fraction(ans[i,0])}')
 
 
 
