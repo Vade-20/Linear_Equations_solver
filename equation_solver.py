@@ -40,7 +40,7 @@ constant = np.zeros((num_var,1))
 number = np.zeros((num_var,num_var))
 
 for i in range(num_var):
-    eq = input(f'Please enter the equation number {i} here:').lower()
+    eq = input(f'Please enter the equation number {i+1} here:').lower()
     eq = right_eq(eq)
     isequation(eq)
     data = re.findall(r'([-]?[\d]*)([a-z])',eq)
